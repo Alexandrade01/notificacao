@@ -52,7 +52,8 @@ public class EmailService {
             //variaveis do corpo do email
             Context context = new Context();
             context.setVariable("nomeTarefa",tarefa.getNomeTarefa());
-            context.setVariable("dataEvento",tarefa.getDataEvento());
+            context.setVariable("dataEvento", tarefa.getDataEvento() != null ? tarefa.getDataEvento().
+                    format(java.time.format.DateTimeFormatter.ofPattern("dd-MM-yyyy 'às' HH:mm")) : null);
             context.setVariable("descricao",tarefa.getDescricao());
 
             String template = templateEngine.process("notificacao",context);
