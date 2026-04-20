@@ -23,7 +23,7 @@ spring:
 
 envio:
   email:
-    remetente:
+    remetente: 'aleestudoscompany@gmail.com'
     nomeRemetente: 'Ale estudos'
 
 
